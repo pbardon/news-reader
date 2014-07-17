@@ -5,7 +5,7 @@ NewReader.Routers.FeedRouter = Backbone.Router.extend({
   
   routes: {
     "": "index",
-    "api/feeds/:id": "feedShow"
+    "feeds/:id": "feedShow"
   },
   
   index: function () {
