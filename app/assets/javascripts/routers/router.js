@@ -5,6 +5,7 @@ NewReader.Routers.FeedRouter = Backbone.Router.extend({
   
   routes: {
     "": "index",
+    "feeds/new": "newFeed",
     "feeds/:id": "feedShow"
   },
   
@@ -24,6 +25,11 @@ NewReader.Routers.FeedRouter = Backbone.Router.extend({
       model: feed
     });
     this._swapView(showView); 
+  },
+  
+  newFeed: function() {
+    var newView = new NewReader.Views.FeedForm();
+    this._swapView(newView);
   },
   
   _swapView: function (view) {
